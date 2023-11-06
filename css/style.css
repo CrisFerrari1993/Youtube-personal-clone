@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-family: 'Roboto', sans-serif;
+}
+/*******************************
+MAIN CONTAINER RULES
+********************************/
+nav{
+    background-color: #0f0f0f;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 500;
+}
+#main-content{
+    flex-grow: 1;
+    background-color:#0f0f0f;
+    overflow-y: auto;
+    margin-top: 70px;
+    max-width: calc(100vw - 250px);
+}
+#wrapper-up{
+    background-color: #0f0f0f;
+    height: calc(100vh - 75px);
+    display: flex;
+    margin-top: 75px;
+}
+#sidebar{
+    width: 250px;
+    height: 100%;
+    background-color:#0f0f0f;
+    overflow-y: auto;
+}
+#main-top-row{
+    min-height: 70px;
+    width: calc(100vw - 250px);
+    display: flex;
+    position: fixed;
+    overflow-x: auto;
+    top: 75px;
+    left: 250px;
+    display: flex;
+    justify-content:flex-start;
+}
+#main-title-divider{
+    display: flex;
+    justify-content: flex-start;
+    margin: 1rem 0;
+}
+#more-btn{
+    width: calc(100vw - 250px);
+    display: flex;
+
+}
+/* divider button section */
+.line{
+    width: 40% ;
+    height: 1px;
+    background-color: #2d2d2d;
+    min-height: 1px;
+    text-align: center;
+    align-self: center;
+}
+.divider-btn {
+    border: 1px solid #2d2d2d ;
+    padding: 0.5rem;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 25px;
+}
+.divider-btn a{
+    color: white;
+    text-decoration: none;
+
+}
+.divider-btn i{
+    display: block;
+    align-self: center;
+    margin: 0 0.5rem;
+}
+
+/*******************************
+Nav Items RULES
+********************************/
+.nav-row{
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+/* left */
+.nav-sx{
+    display: flex;
+    width: 20%;
+}
+.nav-sx a{
+    display: block;
+    align-self: center;
+
+}
+.nav-sx a i{
+    color: white;
+    font-size: 1rem;
+}
+.nav-sx img{
+    margin-left: 1rem;
+    display: block;
+    width: 20%;
+    align-self: center;
+}
+/* center */
+.nav-center{
+    display: flex;
+    width: 60%;
+}
+#search-bar{
+    height:3rem;
+    align-self: center;
+    background-color:#121212;
+    border: 1px solid #2c2c2c;
+    border-radius: 40px 0 0 40px ;
+    width: 88%;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+input{
+    color: white;
+}
+.search-btn{
+    width: 30%;
+    background-color: #222222;
+    display: flex;
+    height: 3rem;
+    align-self: center;
+    border-radius: 0 40px 40px 0;
+    width: 12%;
+    justify-content: center;
+}
+.search-btn a{
+    display: block;
+    align-self: center;
+    color: white;
+    margin-left: 1rem;
+    padding-right: 1rem;
+}
+.btn{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    background-color:#222222 ;
+    align-self: center;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+.btn:hover{
+    background-color: rgb(87, 87, 87);
+}
+.btn a{
+    display: block;
+    align-self: center;
+    color: white;
+    font-size: 1.2rem;
+}
+/* right */
+.nav-dx{
+    display: flex;
+    justify-content: flex-end;
+    width: 20%;
+}
+.round{
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    align-self: center;
+    padding: 1rem;
+}
+.btn.round i.fa-video{
+    align-self: center;
+    justify-self: center;
+    margin-right: 10px;
+    width: 10px;
+}
+.round a{
+    color: white;
+}
+.profile-pic a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile-pic a{
+    display: block;
+    align-self: center;
+}
+.nav-dx .btn{
+    background-color: #0f0f0f;
+}
+.nav-dx .btn:hover {
+    background-color: rgb(87, 87, 87);
+}
+/*******************************
+sidebar Items RULES
+********************************/
+.sidebar-row{
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: auto;
+}
+
+/* 1st col */
+.sidebar-col{
+    padding: 1rem 0;
+}
+.sidebar-col.active li:first-child{
+    background-color: #3d3d3d;
+    border-radius: 5px;
+}
+.sidebar-col li{
+    display: flex;
+    padding-left: 1rem;
+    height: 40px ;
+}
+.sidebar-col li a{
+    align-self: center;
+    display: flex;
+    height: 30px;
+}
+.sidebar-col li:hover{
+    background-color:#3d3d3d ;
+    border-radius: 5px;
+
+}
+.sidebar-col li i{
+    color: white;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    align-self: center;
+}
+.sidebar-col li span{
+    display: inline-block;
+    margin-left: 1.5rem;
+    align-self: center;
+}
+.sidebar-col li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+.sidebar-col li a.you{
+    font-size: 1rem;
+}
+.icon-container{
+    width: 30px;
+    display: flex;
+}
+
+.icon-container .fa-youtube.red{
+    color: red;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-bottom a{
+    color: white ;
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+.footer-bottom span{
+    color: gray;
+    font-size: 0.7rem;
+}
+.footer-1,
+.footer-2,
+.footer-3{
+    margin: 0.5rem 0;
+    padding: 0 1rem;
+}
+
+/* 2nd col */
+.title{
+    display: flex;
+}
+.title h4{
+    color: white;
+    display: inline;
+    align-self: center;
+}
+.title i{
+    color: white;
+    margin-left: 0.5rem;
+}
+/* col 3 */
+.sidebar-col h4{
+    color: white;
+}
+.img-container{
+    display: flex;
+}
+.img-container img{
+    width: 30px;
+    display: block;
+    border-radius: 50%;
+}
+/*******************************
+Main-top-row RULES
+********************************/
+#main-top-row div.item-radius-squared{
+    display: inline-block;
+    align-self: center;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+}
+#main-top-row div.item-radius-squared:hover{
+    background-color: rgb(68, 68, 68);
+}
+#main-top-row div.item-radius-squared.active{
+    background-color: white;
+}
+.top-row a{
+    color: white;
+    text-decoration: none;
+}
+div.top-row.item-radius-squared.active{
+    background-color: white;
+}
+.top-row.item-radius-squared.active a{
+    color: #0f0f0f;
+}
+/*******************************
+MAIN CONTENT RULES
+********************************/
+/*******************************
+Row-video RULES
+********************************/
+.row-video{
+    display: flex;
+    max-width: 100%;
+    padding: 1rem;
+}
+.col-video{
+    max-width: calc((100% / 6) - 1rem);
+    margin: 0.5rem;
+}
+.video-img {
+    position: relative;
+}
+.video-img img{
+    max-width: 100%;
+    height: 220px;
+    border-radius: 0.5rem;
+
+}
+.col-video span#video-lenght{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    padding: 2px;
+    font-size: 0.8rem;
+}
+.video-info{
+    display: flex;
+}
+.creator-logo{
+    max-width:15% ;
+    padding: 0.5rem;
+}
+.creator-info{
+    max-width: 85%;
+    padding: 0.5rem;
+}
+.creator-info p{
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.creator-info p a{
+    color: white;
+    text-decoration: none;
+}
+.creator-info span{
+    display: block;
+}
+.creator-info span a{
+    color: grey;
+    text-decoration: none;
+    font-weight: 400;
+}
+.creator-logo img{
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+/*******************************
+SHORTS VIDEO RULES
+********************************/
+.row-shorts{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+.col-shorts{
+    width: calc((100% / 9) - 1rem);
+    margin: 0.5rem;
+}
+.col-shorts img{
+    height: 350px;
+    max-width: 100%;
+    border-radius: 10px;
+}
+.shorts-video-info p,
+.shorts-video-info span{
+    display: block;
+    margin: 0.5rem 0;
+}
+.shorts-video-info p a{
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+.shorts-video-info span a{
+    color: gray;
+    text-decoration: none;
+}
+
+/*******************************
+MAIN-TITLE -DIVIDER RULES
+********************************/
+#main-title-divider i{
+    display: block;
+    color: red;
+    align-self: center;
+    margin: 0 1rem;
+}
+#main-title-divider h3{
+    color: white;
+    display: block;
+    align-self: center;
+}
+@media all and (max-width: 1550px) {
+    #main-top-row {
+        display: flex;
+        width: calc(100vw - 250px);
+        overflow-x: auto;
+        height: fit-content;
+        padding: 0.5rem 0;
+        justify-content: flex-start;
+    }
+
+    .top-row.item-radius-squared {
+        align-self: center;
+        min-width: fit-content;
+        margin: 0 0.5rem;
+    }
+
+    .top-row.item-radius-squared span {
+        font-size: 0.9rem;
+    }
+    .row-video{
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+    }
+    .col-video{
+        max-width: calc((100% / 3) - 1rem);
+        margin: 0 0.5rem 2rem 0.5rem;
+    }
+    .col-shorts{
+        width: calc((100% / 5) - 1rem);
+        margin: 0.5rem;
+    }
+}
