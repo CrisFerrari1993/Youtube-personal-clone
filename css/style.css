@@ -115,8 +115,8 @@ Nav Items RULES
 .nav-sx img{
     margin-left: 1rem;
     display: block;
-    width: 20%;
-    align-self: center;
+    max-width: 45%;
+    object-fit: cover;
 }
 /* center */
 .nav-center{
@@ -423,6 +423,7 @@ SHORTS VIDEO RULES
 .col-shorts img{
     height: 350px;
     max-width: 100%;
+    object-fit:none;
     border-radius: 10px;
 }
 .shorts-video-info p,
